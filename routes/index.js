@@ -5,6 +5,7 @@ var redirect = require('./redirect');
 var handler = require('./handler');
 
 router.get('/', handler.index);
+router.get('/check', handler.index);
 router.get('/health', handler.health);
 
 router.get('/kicker', redirect);

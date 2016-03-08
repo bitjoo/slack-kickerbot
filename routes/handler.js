@@ -48,7 +48,7 @@ module.exports = {
 		});
 	},
 	index: function indexFn (req, res, next) {
-		res.send("Kickerbot ♥ U");
+		res.send(200, "Kickerbot ♥ U");
 	},
 	health: function healthFn (req, res, next) {
 		res.send(200, "1");
