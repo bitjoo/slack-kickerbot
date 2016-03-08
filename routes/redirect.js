@@ -6,9 +6,9 @@ const routeMap = {
 
 
 module.exports = function (req, res) {
-	if (req.query.text) {
-		res.redirect(307, routeMap[req.query.text]);
+	if (req.body.text) {
+		res.redirect(307, routeMap[req.body.text]);
 	} else {
-		throw new Error('The Command "' + req.query.text + '" is unknown.');
+		throw new Error('The Command "' + req.body.text + '" is unknown.');
 	}
 };

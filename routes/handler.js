@@ -8,7 +8,7 @@ var rf = new ResponseFormatter();
 
 module.exports = {
 	add: function addFn (req, res, next) {
-		Player.create(new Player(req.query.user_name)).then(function(player) {
+		Player.create(new Player(req.body.user_name)).then(function(player) {
 			return Player.list();
 		}).then(function(players) {
 			if (players.length === 4) {

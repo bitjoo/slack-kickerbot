@@ -5,15 +5,14 @@ var redirect = require('./redirect');
 var handler = require('./handler');
 
 router.get('/', handler.index);
-router.get('/check', handler.index);
 router.get('/health', handler.health);
 
-router.get('/kicker', redirect);
+router.post('/kicker', redirect);
 
-router.get('/kicker/list', handler.list);
+router.post('/kicker/list', handler.list);
 
-router.get('/kicker/add', handler.add);
+router.post('/kicker/add', handler.add);
 
-router.get('/kicker/reset', handler.reset);
+router.post('/kicker/reset', handler.reset);
 
 module.exports = router;
