@@ -4,12 +4,15 @@ var router = express.Router();
 var redirect = require('./redirect');
 var handler = require('./handler');
 
-router.post('/kicker', redirect);
+router.get('/', handler.index);
+router.get('/health', handler.health);
 
-router.post('/list', handler.list);
+router.get('/kicker', redirect);
 
-router.post('/add', handler.add);
+router.get('/kicker/list', handler.list);
 
-router.post('/reset', handler.reset);
+router.get('/kicker/add', handler.add);
+
+router.get('/kicker/reset', handler.reset);
 
 module.exports = router;

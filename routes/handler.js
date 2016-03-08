@@ -8,7 +8,7 @@ var rf = new ResponseFormatter();
 
 module.exports = {
 	add: function addFn (req, res, next) {
-		Player.create(new Player(req.body.user_name)).then(function(player) {
+		Player.create(new Player(req.query.user_name)).then(function(player) {
 			return Player.list();
 		}).then(function(players) {
 			if (players.length === 4) {
@@ -46,5 +46,11 @@ module.exports = {
 		}).catch(function (e) {
 			next(e)
 		});
+	},
+	index: function indexFn (req, res, next) {
+		res.send("Kickerbot ♥ U");
+	},
+	health: function healthFn (req, res, next) {
+		res.send(200, "1");
 	}
 }
