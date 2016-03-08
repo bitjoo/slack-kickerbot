@@ -5,7 +5,7 @@ const TOKENS = [
 
 
 module.exports = function (req, res, next) {
-    if (TOKENS.indexOf(req.body.token) >= 0) {
+    if (TOKENS.indexOf(req.body.token) < 0) {
         res.send(403, 'Token.');
     } else {
         next();
