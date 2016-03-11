@@ -36,5 +36,5 @@ if (cluster.isMaster) {
     });
   }
 } else {
-  require('server.js');
+  require(__dirname + '/server.js');
 }
