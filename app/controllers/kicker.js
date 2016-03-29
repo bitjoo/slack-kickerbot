@@ -14,7 +14,7 @@ const routeMap = {
     '-1': '/kicker/remove',
     'list': '/kicker/list',
     'reset': '/kicker/reset'
-    //'': '/kicker/help'
+    //'help': '/kicker/help'
 }
 
 exports.redirect = function (req, res) {
@@ -36,7 +36,7 @@ exports.list = function (req, res) {
 }
 
 exports.add = function (req, res, next) {
-	var game = req.game;
+	var game = req.game,
 		newPlayer = new Player({name: req.body.user_name, playerId: req.body.user_id});
 
 	Game.findIdleGameByPlayer(newPlayer)
