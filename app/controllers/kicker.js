@@ -95,7 +95,7 @@ exports.add = function (req, res, next) {
 }
 
 exports.remove = function (req, res, next) {
-	var game = req.game;
+	var game = req.game,
 	    player = new Player({playerId: req.body.user_id});
 
 	game.removePlayer(player)
