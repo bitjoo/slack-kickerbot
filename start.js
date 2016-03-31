@@ -17,6 +17,8 @@ cluster.on('disconnect', function(worker) {
   }
 });
 
+console.log('NODE_PATH: ' + process.env.NODE_PATH);
+
 if (cluster.isMaster) {
   const workerCount = process.env.NODE_CLUSTER_WORKERS || 4;
   console.log('Starting ${workerCount} workers...');
