@@ -36,9 +36,9 @@ GameSchema.method({
 		}, this.players[0]) || '';
 	},
 	addPlayer: function (player) {
-		this.players.push(newPlayer);
+		this.players.push(player);
 		this._playersCount = this._playersCount += 1;
-		return this.saveAsync()
+		return this.saveAsync();
 	},
 	removePlayer: function (player) {
 		var playerFound = this.players.filter(function (p) {
