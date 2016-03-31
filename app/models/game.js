@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 var PlayerSchema = require(__dirname + '/player.js');
 
 /**
- * User schema
+ * Game schema
  */
 
 var GameSchema = new Schema({

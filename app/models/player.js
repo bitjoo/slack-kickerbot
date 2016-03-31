@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 /**
- * User schema
+ * Player schema
  */
 
 var PlayerSchema = new Schema({
