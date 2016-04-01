@@ -13,8 +13,8 @@ const routeMap = {
     '+1': '/kicker/add',
     '-1': '/kicker/remove',
     'list': '/kicker/list',
-    'reset': '/kicker/reset'
-    //'help': '/kicker/help'
+    'reset': '/kicker/reset',
+    'help': '/kicker/help'
 }
 
 exports.redirect = function (req, res) {
