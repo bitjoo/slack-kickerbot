@@ -129,6 +129,8 @@ exports.help = function (req, res, next) {
 					 '*-1*: Entfernt Dich von der Warteliste.\n\n' + 
 					 '*list*: Zeigt Dir alle Spieler an, die sich bisher für das nächste Spiel registriert haben.\n\n' + 
 					 '*reset*: Wenn Du auf der Warteliste stehst, kannst Du mit diesem Befehl die gesamte Liste löschen. Also nicht unbedarft nutzen.\n\n' + 
-					 '*help*: Zeigt Dir Erklärungen zu den einzelnen Befehlen.'}
+					 '*help*: Zeigt Dir Erklärungen zu den einzelnen Befehlen.',
+			 'mrkdwn_in': [ 'text' ]
+			}
 		]));
 }

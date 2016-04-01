@@ -1,7 +1,7 @@
 {
   "name": "KickerBot",
   "description": "A SlackBot to administrate kicker sessions.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "Bitjo",
     "email": "gitlab@bitjo.de"
