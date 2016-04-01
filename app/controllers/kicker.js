@@ -122,3 +122,13 @@ exports.reset = function (req, res, next) {
 			next(err);
 		});
 }
+
+exports.help = function (req, res, next) {
+	res.json(Formatter.format(Formatter.SILENT, 'Diese Befehle kannst Du nutzen:', [
+			{'text': '*+1*: Setzt Dich auf die Warteliste für das nächste Spiel. Solltest Du der letzte benötigte Spieler sein, wird das Spiel automatisch gestartet.\n\n' + 
+					 '*-1*: Entfernt Dich von der Warteliste.\n\n' + 
+					 '*list*: Zeigt Dir alle Spieler an, die sich bisher für das nächste Spiel registriert haben.\n\n' + 
+					 '*reset*: Wenn Du auf der Warteliste stehst, kannst Du mit diesem Befehl die gesamte Liste löschen. Also nicht unbedarft nutzen.\n\n' + 
+					 '*help*: Zeigt Dir Erklärungen zu den einzelnen Befehlen.'}
+		]));
+}

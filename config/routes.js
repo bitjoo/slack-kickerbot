@@ -38,6 +38,8 @@ module.exports = function (app) {
 
   app.post('/kicker/reset', middleware.authToken, middleware.loadGame, middleware.authPlayer, kicker.reset);
 
+  app.post('/kicker/help', middleware.authToken, kicker.help);
+
   /**
    * Error handling
    */
