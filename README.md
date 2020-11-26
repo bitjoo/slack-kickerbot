@@ -1,5 +1,7 @@
 # Slack Kickerbot
 
+Change
+
 A german bot for slack to manage an upcoming table football session.
 
 ## Options in Slack
